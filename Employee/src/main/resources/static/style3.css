@@ -1,0 +1,38 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(https://www.thesoftwarereport.com/wp-content/uploads/2018/10/peepcogs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 50%;
+    opacity: 0.8;
+}
+
+h2{
+    color: blanchedalmond;
+    font-family: Arial;
+}
+
+
+.container2{
+    justify-content: center;
+    align-items: center;
+    width:800px;
+    height:600px;
+    display:flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-left: 520px;
+    background: rgba(224, 223, 150, 0.7);
+
+}

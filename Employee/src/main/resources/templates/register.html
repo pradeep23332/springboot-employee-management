@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab - youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> Responsive Registration Form | CodingLab </title>
+    <link rel="stylesheet" href="/style5.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Contact Number</span>
+                    <input type="text" placeholder="Enter contact number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" placeholder="Enter your First name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" placeholder="Enter your Last name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">User Type</span>
+                    <select id = "user_type">
+                        <option value = "user_type">Admin</option>
+                        <option value = "user_type">Employee</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Register">
+                <br/>
+                <button type="button" class="btn btn-secondary m-2" onclick="cancelForm()">Exit </button>
+                <script type="text/javascript">
+                    function cancelForm() {
+                        window.location = "[[@{/users}]]";
+                    }
+                </script>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

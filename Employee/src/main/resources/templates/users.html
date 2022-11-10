@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MANAGE USERS</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css }" />
+    <link rel="stylesheet" href="/style2.css" >
+
+</head>
+<body>
+<div class="container-fluid text-center">
+  <br/><br/><br/>
+ <div> <h2><b></b></h2> </div>
+  <br/> <br/>
+
+    <div class="mr-2">
+     <a class=" h3 " th:href="@{/users/new}">Client Details</a>
+    </div>
+
+
+    <div th:if="${message}" class="alert alert-success text-center">
+     [[${message}]]
+    </div>
+
+    <br>
+    <br>
+
+  <div>
+
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Telephone</th>
+          <th></th>
+      </tr>
+      </thead>
+        <tbody>
+        <th:block th:each="user : ${listUsers}">
+            <tr>
+                <td>[[${user.id}]]</td>
+                <td>[[${user.email}]]</td>
+                <td>[[${user.firstName}]]</td>
+                <td>[[${user.lastName}]]</td>
+                <td>[[${user.telephone}]]</td>
+                <td>
+                    <a class ="btn btn-primary" th:href="@{'/users/edit/' + ${user.id}}">Edit</a>
+                    <a class ="btn btn-danger" th:href="@{'/users/delete/' + ${user.id}}">Delete </a>
+                </td>
+            </tr>
+
+
+        </th:block>
+        </tbody>
+
+    </table>
+
+
+
+
+  </div>
+
+
+
+</div>
+<br/>
+<div class="click1">
+<button type="button" class="btn btn-primary m-2" onclick="cancelForm()"> Home Page </button>
+    <button type="button" class="btn btn-secondary m-2" onclick="registerForm()"> Register Page </button>
+    <button type="button" class="btn btn-primary m-2" onclick="empForm()"> Employee page Page </button>
+</div>
+
+<script type="text/javascript">
+    function cancelForm() {
+        window.location = "[[@{/}]]";
+    }
+    function registerForm() {
+        window.location = "[[@{/registration/new}]]";
+    }
+    function empForm() {
+        window.location = "[[@{/adhome}]]";
+    }
+
+
+</script>
+
+</body>
+</html>
